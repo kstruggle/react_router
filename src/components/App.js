@@ -11,15 +11,15 @@ import Home from './Home'
 import User from './User'
 import Profile from './Profile'
 
-import Menu from './Menu';
-
-
 // 判断用户是否登录  显示个人中心
 // 否则跳转到登录页面
 
 import ProtectedRoute from './ProtectedRoute';
 import Login from './Login'
 
+
+//导航栏 选中高亮
+import Menulink from './Menulink'
 
 export default (
   <Router>
@@ -32,10 +32,14 @@ export default (
             </div>
           </div>
           <ul className="nav navbar-nav">
-            <Menulink label="" to="/home"></Menulink>
-            <li><Link to='/home'>首页</Link></li>
-            <li><Link to='/user'>用户管理</Link></li>
-            <li><Link to='/profile'>个人设置</Link></li>
+            <Menulink label="首页" to="/home"></Menulink>
+            <Menulink label="用户管理" to="/user"></Menulink>
+            <Menulink label="个人设置" to="/profile"></Menulink>
+            {/*
+              <li><Link to='/home'>首页</Link></li>
+              <li><Link to='/user'>用户管理</Link></li>
+              <li><Link to='/profile'>个人设置</Link></li>
+            */}
           </ul>
         </div>
       </nav>
