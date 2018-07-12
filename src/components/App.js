@@ -21,6 +21,9 @@ import Login from './Login'
 //导航栏 选中高亮
 import Menulink from './Menulink'
 
+//404页面
+import NotFound from './NotFound'
+
 export default (
   <Router>
     <div>
@@ -62,6 +65,8 @@ export default (
 
               {/* 自定义路由  重定向路由*/}
               <ProtectedRoute path="/profile" component={Profile}/>
+
+              <Route component={NotFound}/>
 
             </Switch>
           </div>
